@@ -26,7 +26,6 @@ export async function POST(request: Request) {
         ""
       )}, password: ${JSON.stringify(res.jennet).replaceAll('"', "")}</h3>`,
     });
-    console.log(result);
 
     return NextResponse.json({ status: true, message: result });
   } catch (error) {
